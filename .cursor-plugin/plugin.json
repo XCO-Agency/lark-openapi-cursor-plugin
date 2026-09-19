@@ -1,0 +1,59 @@
+{
+  "name": "lark-openapi",
+  "displayName": "Lark / Feishu OpenAPI MCP",
+  "version": "0.1.0",
+  "description": "Official-package Cursor plugin for Feishu/Lark OpenAPI MCP (@larksuiteoapi/lark-mcp). Messaging, calendar, tasks, and docs \u2014 bring your own Lark/Feishu App ID & Secret.",
+  "author": {
+    "name": "XCO Agency",
+    "email": "hello@xco.agency"
+  },
+  "publisher": "xco-agency",
+  "license": "MIT",
+  "homepage": "https://xco.agency",
+  "repository": "https://github.com/XCO-Agency/lark-openapi-cursor-plugin",
+  "keywords": [
+    "lark",
+    "feishu",
+    "mcp",
+    "openapi",
+    "messaging",
+    "calendar",
+    "docs"
+  ],
+  "category": "mcp",
+  "tags": [
+    "lark",
+    "feishu",
+    "mcp",
+    "productivity"
+  ],
+  "variables": {
+    "type": "object",
+    "properties": {
+      "LARK_APP_ID": {
+        "type": "string",
+        "title": "Lark / Feishu App ID",
+        "description": "App ID from the Lark or Feishu developer console (Credentials & Basic Info)."
+      },
+      "LARK_APP_SECRET": {
+        "type": "string",
+        "title": "Lark / Feishu App Secret",
+        "description": "App Secret from the Lark or Feishu developer console. Never commit this value."
+      },
+      "LARK_DOMAIN": {
+        "type": "string",
+        "title": "OpenAPI domain",
+        "description": "https://open.larksuite.com for international Lark, or https://open.feishu.cn for Feishu (China).",
+        "default": "https://open.larksuite.com",
+        "enum": [
+          "https://open.larksuite.com",
+          "https://open.feishu.cn"
+        ]
+      }
+    },
+    "required": [
+      "LARK_APP_ID",
+      "LARK_APP_SECRET"
+    ]
+  }
+}
